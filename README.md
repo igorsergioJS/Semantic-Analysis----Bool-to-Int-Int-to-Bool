@@ -17,3 +17,9 @@ O AST agora:
 - Operações Aritméticas Flexíveis: Suporta operações aritméticas entre int e bool, convertendo bool para int.
 
 - Operações Relacionais Flexíveis: Permite comparações entre int e bool, convertendo ambos para int para comparação.
+
+
+
+Para testar as novas funcionalidades, execute o teste3.cpp.
+
+`./tradutor ../Testes/teste3.cpp`
