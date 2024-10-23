@@ -2,12 +2,18 @@
 
 Laboratório 02 - Análise Semântica: Conversões automáticas entre os tipos Bool e Int.
 
-Foi utilizado como código-base o analisador semântico disponibilizado no material de laboratório 10 de Compiladores do professor Judson Santos Santiago. [https://github.com/JudsonSS/Compiladores/tree/2e1b81ba859e18e938ea149d1cef2edea04dde36/Labs/Lab10/Ast](Link aqui.)
+Foi utilizado como código-base o analisador semântico disponibilizado no material de laboratório 10 de Compiladores do professor Judson Santos Santiago. [Link aqui.](https://github.com/JudsonSS/Compiladores/tree/2e1b81ba859e18e938ea149d1cef2edea04dde36/Labs/Lab10/Ast)
 
-O Lexer agora:
+O AST agora:
 
-Ignora corretamente comentários de linha e de bloco, independentemente de se estenderem por múltiplas linhas.
+- Conversão de int para bool: Em expressões lógicas, condicionais e relacionais, int é automaticamente convertido para bool.
 
-Processa múltiplas linhas de entrada, permitindo que o usuário insira todo o código desejado antes de iniciar o processamento, encerrando a entrada ao inserir uma linha em branco.
+- Conversão de bool para int: Em expressões aritméticas e atribuições, bool é automaticamente convertido para int.
 
-Lida adequadamente com o EOF, evitando erros e a impressão de caracteres inválidos ao final da entrada.
+- Verificação de Tipos: Verifica tipos e lança erros para operandos incompatíveis, exceto quando são convertíveis entre int e bool.
+
+- Atribuição Flexível: Permite a atribuição entre variáveis de tipos int e bool com conversão automática.
+
+- Operações Aritméticas Flexíveis: Suporta operações aritméticas entre int e bool, convertendo bool para int.
+
+- Operações Relacionais Flexíveis: Permite comparações entre int e bool, convertendo ambos para int para comparação.
